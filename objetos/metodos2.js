@@ -1,13 +1,18 @@
 let pessoa = {
     nome: 'Sophia',
-    idade: 1,
+    idade: 30,
     falar: function() {
-        console.log(`Olá meu nome é ${this.nome} e minha idade é ${this.idade} ano(s)`)
+        return `Olá meu nome é ${this.nome} tenho ${this.idade} anos`
     },
-    aniversario() {
-        return this.idade ;
+    podeDirigir: function() {
+        if(this.idade <= 18){
+            console.log(pessoa.falar() + ' e não posso dirigir!')
+        }else{
+            console.log(pessoa.falar() + ' e posso dirigir!');
+        }
     }
 }
+pessoa.podeDirigir();
 
 let gato = {
     nome: 'Preta',
@@ -16,6 +21,21 @@ let gato = {
 
 Object.setPrototypeOf(gato, pessoa)
 
-console.log(pessoa.aniversario())
 pessoa.falar()
 gato.falar()
+
+let calculadora = {
+    numeros: 0,
+    somar: function(a, b) {
+        this.numeros = a + b
+    },
+    subtrair(a) {
+        this.numeros -= a
+    }
+}
+
+calculadora.somar(8, 5)
+console.log(calculadora.numeros)
+
+calculadora.subtrair(4)
+console.log(calculadora.numeros)
