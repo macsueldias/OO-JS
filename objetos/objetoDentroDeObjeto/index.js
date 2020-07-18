@@ -5,10 +5,10 @@ let pessoa = {
         return `Olá meu nome é ${this.nome} tenho ${this.idade} anos`
     },
     podeDirigir: function() {
-        if(this.idade <= 18){
-            console.log(pessoa.falar() + ' e não posso dirigir!')
-        }else{
-            console.log(pessoa.falar() + ' e posso dirigir!');
+        if(this.caracteristica.CNH == false){
+            return (pessoa.falar() + ' e não posso dirigir!')
+        }else if(this.idade > 18){
+            return (pessoa.falar() + ' e posso dirigir!');
         }
     },
     caracteristica: {
@@ -17,5 +17,7 @@ let pessoa = {
     }
 }
 
+
+console.log(pessoa.podeDirigir())
 console.log(pessoa.caracteristica)
 console.log(pessoa.caracteristica.carteira[1])
