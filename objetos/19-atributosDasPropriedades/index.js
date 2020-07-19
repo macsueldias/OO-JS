@@ -1,18 +1,3 @@
-// modo não recomendado de copiar objeto
-let obj = {
-    numero: 1,
-}
-
-console.log(obj.numero)
-
-let copia = obj
-
-console.log(copia.numero)
-
-copia.numero = 5
-
-console.log(obj.numero)
-
 // modo recomendado de copiar um objeto
 let pessoa1 = {
     nome: 'Lauane',
@@ -34,5 +19,4 @@ console.log(pessoa1.idade)
 
 pessoa2.nome = 'Bruna'
 console.log(pessoa2.getNome())
-
 
