@@ -7,7 +7,7 @@ Array.prototype.somaDoisPrimeiros = function() {
 }
 
 Array.prototype.concatElem = function() {
-    let j = this.concat(this[0], this[1], this[2])
+    let j = this.join('')
     return j
 }
 
